@@ -26,7 +26,7 @@ int main() {
     printf("Digite a letra do Estado(A-H): \n");
     scanf("%c", &estado1);
 
-    printf("Digite o código da carta(01-04): \n");
+    printf("Digite o código da carta(use a letra referente ao estado + numeros de 01-04): \n");
     scanf("%s", codigo1);
 
     printf("Digite o nome da cidade: \n");
@@ -41,7 +41,7 @@ int main() {
     printf("Qual o Produto Interno Bruto(PIB)? \n");
     scanf("%f", &pib1);
 
-    printf("Qual a quantidade de pontos turísticos?");
+    printf("Qual a quantidade de pontos turísticos? \n");
     scanf("%d", &pontosTuristicos1);
 
 
@@ -49,6 +49,17 @@ int main() {
     // Exibição dos Dados das Cartas:
     // Sugestão: Utilize a função printf para exibir as informações das cartas cadastradas de forma clara e organizada.
     // Exiba os valores inseridos para cada atributo da cidade, um por linha.
+
+    // Saída carta 1
+
+    printf("Carta 1:\n");
+    printf("Estado: %c \n", estado1);
+    printf("Código: %s \n", codigo1);
+    printf("Nome da cidade: %s \n", nomeCidade1);
+    printf("População: %d \n", populacao1);
+    printf("Área: %f km² \n", area1);
+    printf("PIB: %f bilhões de reais \n", pib1);
+    printf("Número de pontos Turísticos: %d \n", pontosTuristicos1);
 
     return 0;
 }
