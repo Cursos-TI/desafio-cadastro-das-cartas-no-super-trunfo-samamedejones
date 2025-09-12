@@ -9,10 +9,15 @@
 int main() {
     // Sugestão: Defina variáveis separadas para cada atributo da cidade.
     // Exemplos de atributos: código da cidade, nome, população, área, PIB, número de pontos turísticos.
+
+    // variaveis entrada de dados
     char estado1, estado2;
     char codigo1[4], codigo2[4], nomeCidade1[20], nomeCidade2[20];
     int populacao1, populacao2, pontosTuristicos1, pontosTuristicos2;
     float area1, area2, pib1, pib2;
+
+    // variaveis de calculo
+    float densidadePopulacional1, densidadePopulacional2, pibPerCapita1, pibPerCapita2;
 
     
     // Cadastro das Cartas:
@@ -44,6 +49,9 @@ int main() {
     printf("Qual a quantidade de pontos turísticos? \n");
     scanf("%d", &pontosTuristicos1);
 
+    densidadePopulacional1 = (float) populacao1 / area1;
+    pibPerCapita1 = (float) (pib1 * 1000000000.0) / populacao1;
+
     printf("\n");
 
     // --- Entrada segunda Carta ---
@@ -71,6 +79,9 @@ int main() {
     printf("Qual a quantidade de pontos turísticos? \n");
     scanf("%d", &pontosTuristicos2);
 
+    densidadePopulacional2 = (float) populacao2 / area2;
+    pibPerCapita2 = (float) (pib2 * 1000000000.0) / populacao2;
+
     printf("\n");
 
     // Exibição dos Dados das Cartas:
@@ -86,7 +97,10 @@ int main() {
     printf("População: %d \n", populacao1);
     printf("Área: %.2f km² \n", area1);
     printf("PIB: %.2f bilhões de reais \n", pib1);
-    printf("Número de pontos Turísticos: %d \n\n", pontosTuristicos1);
+    printf("Número de pontos Turísticos: %d \n", pontosTuristicos1);
+    printf("Densidade Populacional: %.2f hab/km²\n", densidadePopulacional1);
+    printf("PIB per Capita: %.2f reais\n\n", pibPerCapita1);
+
 
     // --- Saída carta 2 ---
 
@@ -98,6 +112,9 @@ int main() {
     printf("Área: %.2f km² \n", area2);
     printf("PIB: %.2f bilhões de reais \n", pib2);
     printf("Número de pontos Turísticos: %d \n", pontosTuristicos2);
+    printf("Densidade Populacional: %.2f hab/km²\n", densidadePopulacional2);
+    printf("PIB per Capita: %.2f reais\n", pibPerCapita2);
+
 
     return 0;
 }
